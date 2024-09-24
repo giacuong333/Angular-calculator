@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+  </head>
+  <body>
+    <div class="app">
+      <div class="calculator">
+        <div>
+          <!-- <input
+            type="text"
+            class="previous-output"
+            [value]="previousExpression"
+            disabled
+          /> -->
+          <input type="text" class="output" [(ngModel)]="expression" disabled />
+        </div>
+        <div class="buttons">
+          <button
+            *ngFor="let button of buttons"
+            (click)="handleButtonClicked(button)"
+          >
+            {{ button.label }}
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
